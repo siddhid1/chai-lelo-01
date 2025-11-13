@@ -1,6 +1,7 @@
 import mongoose, { modelNames } from "mongoose";
 
 const orderedItemSchema = new mongoose.Schema({
+  itemName : String ,
   item: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "MenuItem",
@@ -20,6 +21,7 @@ const orderSchema = new mongoose.Schema(
       ref: "Users",
       required: true,
     },
+    userFirstName:String , 
     phone: {
       type: String,
       required: true,
